@@ -6,7 +6,7 @@
 /*   By: rukabash <rukabash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 19:47:38 by rukabash          #+#    #+#             */
-/*   Updated: 2024/07/24 15:20:10 by rukabash         ###   ########.fr       */
+/*   Updated: 2024/07/28 20:27:29 by rukabash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ char	*get_next_line(int fd)
 	int			i;
 	int			j;
 
-	buffer = malloc(sizeof(char) * BUFFER_SIZE + 1);
+	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (buffer == NULL)
 		return (NULL);
 	read_size = read(fd, buffer, BUFFER_SIZE);
-	if (read_size <= 0)
+	if (read_size < 0 || read_size >= 21474147)
 	{
 		free(buffer);
 		return (NULL);

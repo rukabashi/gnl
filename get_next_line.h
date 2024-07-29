@@ -6,7 +6,7 @@
 /*   By: rukabash <rukabash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 19:47:45 by rukabash          #+#    #+#             */
-/*   Updated: 2024/07/21 16:11:40 by rukabash         ###   ########.fr       */
+/*   Updated: 2024/07/28 20:21:15 by rukabash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 64
+#  define BUFFER_SIZE 42
 # endif
 
 #  include <fcntl.h>
