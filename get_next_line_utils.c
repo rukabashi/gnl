@@ -6,7 +6,7 @@
 /*   By: rukabash <rukabash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 19:47:40 by rukabash          #+#    #+#             */
-/*   Updated: 2024/07/29 16:39:46 by rukabash         ###   ########.fr       */
+/*   Updated: 2024/07/29 16:42:02 by rukabash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,8 +176,6 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-// メイン関数
-// 目的: ファイルを開き、get_next_line関数を使って行を読み取ります。
 #include "get_next_line.h"
 #include <fcntl.h>
 #include <stdio.h>
@@ -186,12 +184,8 @@ int	main(void)
 {
 	char	*line;
 	int		fd;
-	// ファイルを読み取り専用で開く
 	fd = open("test.txt", O_RDONLY);
-	// get_next_line関数を使ってファイルから1行を読み取る
 	line = get_next_line(fd);
-	// 読み取った行を出力する
 	printf("1 ; %s\n", line);
-	// プログラムの終了
 	return (0);
 }
